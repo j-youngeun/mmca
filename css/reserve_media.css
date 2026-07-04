@@ -650,3 +650,18 @@
     font-size: 14px
   }
 }
+
+@media (max-width: 480px) {
+  .checkout {
+    padding-top: 0;
+  }
+
+  .checkout .inner {
+    padding-top: 112px;
+  }
+
+  .checkout_head h2 {
+    font-size: clamp(44px, 12vw, 48px);
+    line-height: 1.08;
+  }
+}

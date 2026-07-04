@@ -600,21 +600,23 @@
   }
 
   .f_top {
-    align-items: center;
+    align-items: stretch;
     flex-direction: column;
-    padding: 56px 40px 40px;
-    gap: 56px;
+    padding: 56px 30px 40px;
+    gap: 64px;
   }
 
   .f_left {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 34px 26px;
+    gap: 34px 20px;
+    width: 100%;
   }
 
   .branch {
     width: 100%;
     gap: 10px;
+    padding-left: 8px;
   }
 
   .branch:nth-child(1),
@@ -643,16 +645,16 @@
   .f_right {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* gap: 24px 26px; */
-    gap: 10px;
+    gap: 10px 20px;
     align-items: start;
     width: 100%;
-    padding-left: 35px;
+    padding-left: 0;
   }
 
   .f_right_col {
     width: 100%;
     flex: none;
+    padding-left: 8px;
   }
 
   .f_right_col h4 {
@@ -666,24 +668,57 @@
 
   .f_right_col ul li a {
     font-size: 12px;
-    gap: 8px;
+    gap: 6px;
+  }
+
+  .f_right_col:not(:first-child) ul li a {
+    gap: 0;
   }
 
   .f_right_col ul li span {
-    width: 14px;
+    width: 16px;
     height: 14px;
+    flex: 0 0 16px;
   }
 
   .f_right_col ul li iconify-icon {
     font-size: 14px;
-    width: 14px;
+    width: 16px;
     height: 14px;
   }
 
   .f_right_col ul li img {
-    width: 11px;
+    width: 16px;
     height: 11px;
+    object-fit: contain;
     padding-right: 0;
+  }
+
+  .f_logo span {
+    font-size: clamp(92px, 29vw, 122px);
+    line-height: 0.95;
+    letter-spacing: -0.075em;
+    transform: none;
+  }
+
+  .copyright {
+    width: min(100% - 48px, 342px);
+    margin: 0 auto;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+    padding-top: 16px;
+  }
+
+  .top_btn {
+    right: 16px;
+    bottom: 18px;
+  }
+
+  .top_btn a {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
   }
 
   .cursor,

@@ -257,13 +257,18 @@ body.is_ready {
   z-index: 0;
 }
 
-/* ── 1024px 이하 인트로 숨김 ── */
-@media (max-width: 1024px) {
+/* Hide intro on every viewport */
+body {
+  visibility: visible;
+}
 
-  #intro_wrapper,
-  .scroll_hint,
-  .skip_btn,
-  .scroll_spacer {
-    display: none !important;
-  }
+#intro_wrapper,
+.columns_layer,
+.text_layer,
+.shapes_layer,
+.bg_layer,
+.scroll_hint,
+.skip_btn,
+.scroll_spacer {
+  display: none !important;
 }

@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('is_ready');
+  window.location.replace('main.html');
+  return;
+
   history.scrollRestoration = 'manual';
   window.scrollTo(0, 0);
 
