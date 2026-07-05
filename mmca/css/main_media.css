@@ -343,34 +343,61 @@
 }
 @media screen and (max-width: 480px) {
   /* ===== MAIN VISUAL ===== */
+  .main_visual {
+    height: auto;
+    min-height: 0;
+    width: 100%;
+    overflow: visible;
+    background: var(--main_black);
+  }
+
+  .visual_inner {
+    height: 88vh;
+    height: 88svh;
+    min-height: 640px;
+    max-height: 760px;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../img/main_bg.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
   .ticket {
     display: none;
   }
 
   .main_title {
-    font-size: 52px;
-    left: 38px;
-    bottom: 65%;
-    line-height: 1.1;
-    font-weight: 500;
-    letter-spacing: -0.5%;
+    font-size: clamp(36px, 10.2vw, 48px);
+    left: clamp(24px, 9vw, 44px);
+    top: clamp(108px, 16vh, 150px);
+    bottom: auto;
+    line-height: 1.14;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    width: calc(100% - clamp(48px, 18vw, 88px));
+    margin: 0;
+    padding: 0;
   }
 
   .info_wrap {
     position: absolute;
-    bottom: 11%;
-    left: 40px;
-    right: 80px;
+    top: clamp(355px, 56svh, 500px);
+    left: clamp(32px, 12vw, 52px);
+    right: clamp(24px, 9vw, 44px);
+    padding: 0;
     display: flex;
-    gap: 172px;
+    gap: 0;
     color: var(--gray_06);
-    z-index: 2;
+    z-index: 3;
   }
 
   .info_left {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(16px, 4vw, 20px);
+    margin-left: 0;
   }
 
   .info_right {
@@ -378,18 +405,18 @@
   }
 
   .label {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: clamp(18px, 5vw, 21px);
+    margin-bottom: clamp(12px, 3vw, 18px);
     font-weight: 400;
   }
 
   .info_block .day {
-    font-size: 20px;
+    font-size: clamp(14px, 4vw, 17px);
     font-weight: 400;
   }
 
   .info_block .time {
-    font-size: 28px;
+    font-size: clamp(20px, 6vw, 24px);
     font-weight: 500;
   }
 
