@@ -1,6 +1,10 @@
+(function redirect_to_main_immediately() {
+  window.location.replace('main.html' + window.location.search + window.location.hash);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('is_ready');
-  window.location.replace('main.html');
+  window.location.replace('main.html' + window.location.search + window.location.hash);
   return;
 
   history.scrollRestoration = 'manual';
